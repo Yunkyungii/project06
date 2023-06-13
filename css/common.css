@@ -19,21 +19,21 @@ body {
     overflow: hidden;
 }
 
-.inner {
+/* .inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
+} */
 
 .sec {
     padding: 100px 0;
 }
 
-.sec .tit {
+/* .sec .tit {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
+} */
 
 .bg {
     background: #f9f9f9;
@@ -42,4 +42,5 @@ body {
 p {
     font-size: 16px;
     line-height: 20px;
+    word-break: keep-all;
 }

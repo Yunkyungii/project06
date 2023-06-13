@@ -1,5 +1,17 @@
-* {
+/* * {
     outline: 1px solid tomato;
+} */
+
+.title {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    padding: 0 15px;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header {
@@ -49,7 +61,7 @@
     height: 400px;
 }
 
-.header .sub .main_visual {}
+/* 여기서부터 */
 
 .main_visual .itm {
     /* height: calc(100vh - 80px); */
@@ -96,4 +108,256 @@
     font-size: 50px;
     font-weight: 700;
     position: relative;
+}
+
+/* 여기서부터 */
+
+.main_menu {
+    padding: 100px 0;
+}
+
+.main_menu h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.main_menu h2 span {
+    position: relative;
+    display: block;
+}
+
+.main_menu h2 span::before {
+    content: "";
+    width: 310px;
+    height: 10px;
+    background-color: #d4b886;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.main_menu p {
+    font-size: 18px;
+    font-weight: 300;
+
+}
+
+
+.main_menu .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+.main_menu figure {
+    text-align: center;
+}
+
+.main_menu figure .img_box {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 0 0 20px 0;
+}
+
+.main_menu figure .img_box::before {
+    content: "";
+    width: 250px;
+    height: 250px;
+    background-color: #917056;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+
+    transition: 0.5s;
+}
+
+.main_menu figure .img_box:hover::before {
+    content: "";
+    width: 300px;
+    height: 300px;
+}
+
+.main_menu figure img {
+    height: 100%;
+}
+
+.main_menu .desc {
+    text-align: center;
+}
+
+.main_menu .desc h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.main_menu .desc p {
+    display: inline-block;
+    font-size: 15px;
+    width: 300px;
+}
+
+/* 여기서부터 */
+
+.main_content {
+    padding: 100px 0;
+    overflow: hidden;
+    /* background: #f9f9f9; */
+}
+
+.main_content h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    position: relative;
+}
+
+.main_content h2::before {
+    content: "";
+    width: 310px;
+    height: 10px;
+    background-color: #d4b886;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.main_content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.main_content a {
+    display: inline-block;
+    margin: 0 0 50px 0;
+}
+
+
+.main_content .tab_menu {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .tab_menu>* {
+    flex: 1;
+}
+
+.main_content .tab_menu .left h3 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.main_content .tab_menu .left h3::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    border-radius: 30px;
+    background: #917056;
+}
+
+.main_content .tab_menu .left h3 span {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.main_content .tab_menu .left p {
+    margin: 0 0 30px 0;
+    font-size: 16px;
+}
+
+.main_content .tab_menu .left a {
+    margin: 0 0 30px 0;
+}
+
+.main_content .tab_menu .menu_list li {
+    position: relative;
+    margin: 0 0 30px 0;
+    padding: 0 0 0 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .tab_menu .menu_list li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.main_content .tab_menu .menu_list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid tomato;
+    border-radius: 50%;
+}
+
+.main_content .tab_menu .menu_list li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 15px;
+    bottom: -25px;
+    width: 2px;
+    background: tomato;
+}
+
+.main_content .tab_menu .menu_desc li {
+    height: 0;
+    overflow: hidden;
+}
+
+.main_content .tab_menu .menu_desc li.on {
+    height: auto;
+}
+
+.main_content .tab_menu .menu_desc figure {
+    margin: 0 0 10px 0;
+}
+
+.main_content .tab_menu .right {
+    position: relative;
+}
+
+.main_content .tab_menu .right::before {
+    content: "";
+    position: absolute;
+    top: -500px;
+    right: -200px;
+    width: 500px;
+    height: 700px;
+    background: #917056;
+    border-radius: 50px;
+    transform: rotate(50deg);
+    transition: 1s;
+    z-index: -1;
+}
+
+.main_content.on .tab_menu .right::before {
+    top: -200px;
+    right: 100px;
 }
