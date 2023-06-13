@@ -339,6 +339,8 @@
     margin: 0 0 10px 0;
 }
 
+.main_content .tab_menu .menu_desc figure img {}
+
 .main_content .tab_menu .right {
     position: relative;
 }
@@ -347,17 +349,37 @@
     content: "";
     position: absolute;
     top: -500px;
-    right: -200px;
-    width: 500px;
-    height: 700px;
+    right: -500px;
+    width: 700px;
+    height: 1000px;
     background: #917056;
     border-radius: 50px;
-    transform: rotate(50deg);
+    transform: rotate(60deg);
     transition: 1s;
     z-index: -1;
 }
 
 .main_content.on .tab_menu .right::before {
-    top: -200px;
-    right: 100px;
+    top: -400px;
+    right: -200px;
+}
+
+.main_search {
+    padding: 100px 0;
+    background: #f9f9f9;
+
+}
+
+.main_search .inner {
+    text-align: center;
+}
+
+.main_search h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.main_search p {
+    margin: 0 0 30px 0;
 }
