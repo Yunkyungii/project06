@@ -15,7 +15,6 @@
 }
 
 .header {
-    line-height: 100px;
     position: fixed;
     left: 0;
     right: 0;
@@ -25,27 +24,27 @@
 
 .header .inner {
     display: flex;
-    gap: 40px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    height: 100px;
 }
 
 
 .header .gnb>ul {
     display: flex;
-    gap: 50px;
 }
 
 .header .gnb>ul>li {
-    font-size: 20px;
+    padding: 0 20px;
+    font-size: 18px;
     position: relative;
 }
 
-.header .sub {
+.header .gnb .sub {
     height: 0;
     overflow: hidden;
     position: absolute;
-    top: 100px;
+    top: 101px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 999;
@@ -55,6 +54,7 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    background: #f9f9f9;
 }
 
 .header .gnb:hover>ul>li .sub {
@@ -64,7 +64,7 @@
 /* 여기서부터 */
 
 .main_visual .itm {
-    /* height: calc(100vh - 80px); */
+    height: 100vh;
     position: relative;
 }
 
@@ -337,6 +337,21 @@
 
 .main_content .tab_menu .menu_desc figure {
     margin: 0 0 10px 0;
+    position: relative;
+}
+
+.main_content .tab_menu .menu_desc figure .desc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100px;
+    vertical-align: middle;
+
+    width: 100%;
+
+    background: #d4b886;
+    border-radius: 0 0 50px 0;
 }
 
 .main_content .tab_menu .menu_desc figure img {}
