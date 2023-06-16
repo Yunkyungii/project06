@@ -7,6 +7,13 @@ $(function () {
             : $('.header').removeClass('on')
     });
 
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        sct > 0
+            ? $('.btn_circle').addClass('on')
+            : $('.btn_circle').removeClass('on')
+    });
+
 
     $('.main_slide').slick({
         arrows: false,

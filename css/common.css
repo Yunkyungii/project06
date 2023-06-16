@@ -2,12 +2,15 @@
 
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+
 
 
 
 
 body {
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', 'Noto Sans KR', 'Song Myung', sans-serif;
 }
 
 .blind {

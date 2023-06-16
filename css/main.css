@@ -11,7 +11,7 @@
 .inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 15px 0 15px;
+    padding: 0 15px;
 }
 
 .btn {
@@ -81,19 +81,23 @@
 }
 
 /* 여기서부터 */
-
-.main_visual .itm {
-    height: 100vh;
+.main_visual {
     position: relative;
 }
 
+.main_visual .itm {
+    height: 700px;
+    position: relative;
+    border-radius: 0 0 100px 0;
+}
+
 .main_visual .itm01 {
-    height: 100vh;
+    height: 700px;
     background: url(../images/visual1.png)no-repeat center center/cover;
 }
 
 .main_visual .itm02 {
-    height: 100vh;
+    height: 700px;
     background: url(../images/visual2.png)no-repeat center center/cover;
 }
 
@@ -106,6 +110,7 @@
     transition: 1.5s;
     visibility: hidden;
     opacity: 0;
+    font-family: 'Song Myung', serif;
 }
 
 .main_slide .slick-active h2 {
@@ -113,20 +118,57 @@
     visibility: visible;
     opacity: 1;
 
+
 }
 
 .main_visual h2 span {
     display: block;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 0 10px 0;
 }
 
 .main_visual h2 strong {
     display: block;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
+}
+
+.main_visual .btn_circle {
+    position: fixed;
+    bottom: 20%;
+    right: 100px;
+    z-index: 998;
+    transition: 0.5s;
+
+}
+
+.main_visual .btn_circle.on {
+    bottom: 10%
+}
+
+.main_visual .btn_circle .case {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: #917056;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    border-radius: 50%;
+
+
+}
+
+.main_visual .btn_circle:hover .case {
+    animation: bounce 1s infinite;
 }
 
 /* 여기서부터 */
@@ -176,21 +218,26 @@
 
 .main_menu figure {
     text-align: center;
+    border: 1px solid #d4b886;
+    border-radius: 30px;
+    padding: 40px 0;
+
 }
 
 .main_menu figure .img_box {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     text-align: center;
     position: relative;
     display: inline-block;
     margin: 0 0 35px 0;
 }
 
-.main_menu figure .img_box::before {
+
+.main_menu figure .img_box::after {
     content: "";
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #917056;
     display: inline-block;
     position: absolute;
@@ -199,18 +246,20 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: -1;
-
     transition: 0.5s;
 }
 
-.main_menu figure .img_box:hover::before {
-    content: "";
-    width: 300px;
-    height: 300px;
+.main_menu figure:hover .img_box::after {
+
+    width: 180px;
+    height: 180px;
 }
+
+
 
 .main_menu figure img {
     height: 100%;
+    z-index: 999;
 }
 
 .main_menu .desc {
@@ -226,7 +275,9 @@
 .main_menu .desc p {
     display: inline-block;
     font-size: 15px;
+    height: 60px;
     width: 300px;
+    margin: 0 0 20px 0;
 }
 
 /* 여기서부터 */
@@ -248,9 +299,28 @@
 }
 
 .main_search p {
-    margin: 0 0 30px 0;
+    margin: 0 0 50px 0;
 }
 
+.main_search a {
+    padding: 20px 40px;
+    border: 1px solid #917056;
+    color: #917056;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.main_search a:hover {
+    background: #917056;
+    color: #fff;
+    padding: 20px 80px;
+}
+
+.main_search a i {
+    padding: 0 10px 0 0;
+}
 
 /* 여기서부터 */
 
@@ -258,7 +328,7 @@
 .main_content {
     padding: 100px 0;
     overflow: hidden;
-    /* background: #f9f9f9; */
+    background: linear-gradient(#fff 50% #f9f9f9 50%);
 }
 
 .main_content h2 {
@@ -287,75 +357,105 @@
     margin: 0 0 20px 0;
 }
 
-.main_content a {
-    display: inline-block;
-    margin: 0 0 50px 0;
-}
-
-
 .main_content .tab_menu {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 30px;
+    align-items: center;
 }
 
-.main_content .tab_menu>* {
-    flex: 1;
-}
-
-.main_content .tab_menu .left h3 {
-    font-size: 30px;
+.main_content .tab_menu .tab__tit h3 {
+    font-size: 35px;
     font-weight: 500;
     line-height: 1.2;
     margin: 0 0 10px 0;
     position: relative;
 }
 
-.main_content .tab_menu .left h3::before {
+.main_content .tab_menu .tab__tit h3::before {
     content: "";
     position: absolute;
     top: -15px;
     left: 0;
-    width: 30px;
-    height: 1px;
-    border-radius: 30px;
+    width: 10px;
+    height: 10px;
+    /* border-radius: 30px; */
     background: #917056;
 }
 
-.main_content .tab_menu .left h3 span {
+.main_content .tab_menu .tab__tit h3 span {
     display: block;
     font-size: 25px;
     font-weight: 400;
 }
 
-.main_content .tab_menu .left p {
-    margin: 0 0 60px 0;
+.main_content .tab_menu .tab__tit p {
+    margin: 0 0 50px 0;
     font-size: 16px;
 }
 
-.main_content .tab_menu .left a {
-    margin: 0 0 30px 0;
+.main_content .tab_menu .tab__tit a {
+    padding: 10px 30px;
+    background: #917056;
+    color: #fff;
 }
 
-.main_content .tab_menu .menu_list li {
+.main_content .tab_menu .menu_desc>li {
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.main_content .tab_menu .menu_desc>li.on {
+    height: auto;
+    animation: slideup 1s;
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.main_content .tab_menu .menu_desc figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid #f9f9f9;
+
+}
+
+.main_content .tab_menu .menu_list {
+    padding: 0 0 0 20px;
+}
+
+.main_content .tab_menu .menu_list>li {
     position: relative;
     margin: 0 0 30px 0;
     padding: 0 0 0 30px;
     display: flex;
-    gap: 30px;
 }
 
-.main_content .tab_menu .menu_list li a {
+.main_content .tab_menu .menu_list>li a {
     font-size: 18px;
     font-weight: 500;
     transition: 0.8s;
 }
 
-.main_content .tab_menu .menu_list li.on a {
+.main_content .tab_menu .menu_list>li.on a {
     box-shadow: inset 200px 0 0 rgba(212, 184, 134, 0.5);
 }
 
 
-.main_content .tab_menu .menu_list li::before {
+.main_content .tab_menu .menu_list>li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -364,56 +464,4 @@
     height: 10px;
     background: #d4b886;
     border-radius: 50%;
-}
-
-/* .main_content .tab_menu .menu_list li:not(:last-child):after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 15px;
-    bottom: -25px;
-    width: 2px;
-    background: tomato;
-} */
-
-.main_content .tab_menu .menu_desc li {
-    height: 0;
-    overflow: hidden;
-}
-
-.main_content .tab_menu .menu_desc li.on {
-    height: auto;
-    animation: slideInRight 1s;
-}
-
-.main_content .tab_menu .menu_desc figure {
-    position: relative;
-    overflow: hidden;
-    /* border-radius: 50%; */
-
-}
-
-
-
-.main_content .tab_menu .right {
-    position: relative;
-}
-
-.main_content .tab_menu .right::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    right: -50px;
-    width: 700px;
-    height: 1100px;
-    background: #917056;
-    border-radius: 0 0 50px 50px;
-    transform: rotate(65deg);
-    transition: 1s;
-    z-index: -1;
-}
-
-.main_content.on .tab_menu .right::before {
-    top: -450px;
-    right: -350px;
 }
