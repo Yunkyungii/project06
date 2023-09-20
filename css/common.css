@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Roboto', 'Noto Sans KR', 'Song Myung', sans-serif;
+    word-break: keep-all;
 }
 
 .blind {
