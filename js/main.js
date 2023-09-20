@@ -44,7 +44,7 @@ $(function () {
         responsive: [
             {
                 breakpoint: 768,
-                settings: 'unslick'
+                settings: 'unslick',
             }
         ]
     });
